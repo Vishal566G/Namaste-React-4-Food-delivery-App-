@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/Vishal566G/Namaste-React-4-Food-delivery-App-#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "parcel": "^2.12.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
     "process": "^0.11.10"
