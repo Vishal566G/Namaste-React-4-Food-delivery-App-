@@ -144,3 +144,10 @@ a {
   font-weight: 400;
   font-size: 16px;
 }
+
+.user-card{
+  border: 2px solid black;
+  max-width: 60%;
+  margin: 25px 10px;
+  padding: 25px;
+}
