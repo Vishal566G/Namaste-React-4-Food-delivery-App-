@@ -32,12 +32,13 @@ const Body = () => {
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
-      <div className="filter-box">
+    <div className="body max-w-[90%] block m-auto">
+      <div className="filter-box flex justify-between py-6">
         <div className="search">
           <input
             type="text"
-            className="search-box"
+            className="search-box border-solid border-[1px] border-black rounded-lg mx-4 py-1 px-4"
+            placeholder="Search for any food..."
             value={searchText.toLowerCase()}
             onChange={(e) => {
               setSearchText(e.target.value);
@@ -54,24 +55,26 @@ const Body = () => {
 
               setFilteredRestaurant(filteredRestaurants);
             }}
-            className="searchBtn"
+            className="searchBtn border-solid divide-solid border-1 py-1 px-4 bg-green-400 rounded-lg hover:cursor-pointer"
           >
             Search
           </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filteredList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4
-            );
-            setListOfRestaurants(filteredList);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+        <div>
+          <button
+            className="filter-btn border-solid divide-solid border-1 py-1 px-4 bg-green-400 rounded-lg hover:cursor-pointer"
+            onClick={() => {
+              const filteredList = listOfRestaurants.filter(
+                (res) => res.info.avgRating > 4
+              );
+              setListOfRestaurants(filteredList);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
+        </div>
       </div>
-      <div className="res-container">
+      <div className="res-container flex flex-wrap gap-9 justify-center">
         {filteredRestaurant.map((restaurant) => (
           <Link
             key={restaurant.info.id}

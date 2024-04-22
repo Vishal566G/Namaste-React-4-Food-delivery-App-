@@ -6,12 +6,12 @@ const Header = () => {
   let [btnNameReact, setBtnNameReact] = useState("Login");
 
   return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src={LOGO_URL} />
+    <div className="header flex justify-between items-center border-1 border-solid shadow-lg relative z-10 px-6 bg-slate-400">
+      <div className="logo-container relative z-0">
+        <img className="logo w-32" src={LOGO_URL} />
       </div>
       <div className="nav-items">
-        <ul>
+        <ul className="flex gap-6">
           <li>
             <Link to="/">Home</Link>
           </li>
