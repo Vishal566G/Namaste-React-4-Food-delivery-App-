@@ -1,0 +1,17 @@
+[33mcommit 8959867f7196f3b820061e754652e42a65b02425[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Vishal <visku199@gmail.com>
+Date:   Fri Apr 19 20:45:22 2024 +0530
+
+    custom hooks, class based componets, lazy loading
+
+[33mcommit c6aad5033ab337bae2a704733076f1751bb8eea6[m
+Author: Vishal <visku199@gmail.com>
+Date:   Sat Apr 13 20:29:38 2024 +0530
+
+    Add routing, dynamic routing and create menu items card for each card
+
+[33mcommit 02971da08703d1011f90b4581ca24589f41f09ad[m
+Author: Vishal <visku199@gmail.com>
+Date:   Thu Apr 11 19:24:56 2024 +0530
+
+    Home Page UI with Cards
