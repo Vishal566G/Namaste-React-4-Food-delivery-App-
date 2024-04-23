@@ -13,7 +13,7 @@ const RestaurantCard = (props) => {
   } = resData?.info;
 
   return (
-    <div className="res-card w-48 hover:scale-95 transition-all"> 
+    <div className="res-card w-48 hover:scale-95 transition-all">
       <div className="">
         <img
           className="res-logo rounded-lg h-[200px]"
@@ -31,6 +31,23 @@ const RestaurantCard = (props) => {
       </div>
     </div>
   );
+};
+
+// Higher order component
+
+// input - RestrauntCard => RestrauntCardIsOpen
+
+export const isOpenLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div className="hover:cursor-pointer hover:scale-95 transition-all">
+        <label className="absolute bg-green-700 text-white z-10 p-1 rounded-md">
+          We're Open!!
+        </label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 };
 
 export default RestaurantCard;
