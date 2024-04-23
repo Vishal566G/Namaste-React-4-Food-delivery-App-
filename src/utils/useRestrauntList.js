@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { RESTRAUNT_MENU_API } from "./constants";
 
-const useRestrauntInfo = () => {
+const useRestrauntList = () => {
   const [listOfRestraunts, setListOfRestraunts] = useState([]);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const useRestrauntInfo = () => {
   const fetchData = async () => {
     const data = await fetch(RESTRAUNT_MENU_API);
     const json = await data.json();
-    console.log(json.data)
+    console.log(json.data);
     setListOfRestraunts(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -19,4 +19,4 @@ const useRestrauntInfo = () => {
   return listOfRestraunts;
 };
 
-export default useRestrauntInfo;
+export default useRestrauntList;
