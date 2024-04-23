@@ -21,7 +21,7 @@ const Grocery = lazy(() => import("./components/Grocery"));
 const AppLayout = () => {
   console.log(<Body />);
   return (
-    <div className="app">
+    <div className="app font-poppins">
       <Header />
       <Outlet />
     </div>

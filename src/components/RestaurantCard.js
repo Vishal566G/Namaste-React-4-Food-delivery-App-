@@ -22,12 +22,12 @@ const RestaurantCard = (props) => {
         />
       </div>
       <div className="res-description px-2">
-        <h3>{name}</h3>
-        <p>
+        <h3 className="font-bold text-lg">{name}</h3>
+        <p className="font-semibold text-base">
           &#9733; {avgRating} &#x2022; {resData.info.sla.deliveryTime} mins
         </p>
-        <p>{cuisines.join(", ")}</p>
-        <p>{areaName}</p>
+        <p className="text-base">{cuisines.join(", ")}</p>
+        <p className="text-base">{areaName}</p>
       </div>
     </div>
   );
