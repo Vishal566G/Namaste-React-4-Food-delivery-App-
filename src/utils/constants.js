@@ -6,3 +6,6 @@ export const LOGO_URL =
 
 export const MENU_API =
   "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.753111&lng=77.108764&restaurantId=";
+
+export const RESTRAUNT_MENU_API =
+  "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.753111&lng=77.108764&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
