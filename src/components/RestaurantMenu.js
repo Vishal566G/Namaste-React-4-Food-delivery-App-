@@ -16,16 +16,12 @@ const RestaurantMenu = () => {
   const { itemCards } =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
-  // console.log(resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
-
   const categories =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c?.card?.card?.["@type"] ==
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-
-  // console.log(categories);
 
   return (
     <div className="menu max-w-[80%] m-auto block">
@@ -38,7 +34,10 @@ const RestaurantMenu = () => {
       </div>
       <div className="Accordion">
         {categories.map((categories) => (
-          <ResMenuCat data={categories?.card?.card} />
+          <ResMenuCat
+            key={categories?.card?.card?.title}
+            data={categories?.card?.card}
+          />
         ))}
       </div>
     </div>
