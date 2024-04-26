@@ -1,13 +1,10 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
 
-const ResMenuCat = ({ data }) => {
-  const [showItems, setShowItems] = useState(false);
-
+const ResMenuCat = ({ data, showItems, setShowIndex }) => {
   const handleClick = () => {
-    setShowItems(!showItems);
+    setShowIndex() == true ? false : true;
   };
-
   return (
     <div>
       {/*Accordion Header */}
