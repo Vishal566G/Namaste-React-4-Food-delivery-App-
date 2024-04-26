@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -8,6 +8,7 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import Shimmer from "./components/Shimmer";
+import UserContext from "./utils/userContext";
 
 // Chunking
 // Code splitting
@@ -19,12 +20,24 @@ import Shimmer from "./components/Shimmer";
 const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
-  console.log(<Body />);
+  const [userName, setUserName] = useState();
+
+  // Authentication
+  useEffect(() => {
+    // API call
+    const data = {
+      userName: "Vishal GAUD",
+    };
+    setUserName(data.userName);
+  }, []);
+
   return (
-    <div className="app font-poppins">
-      <Header />
-      <Outlet />
-    </div>
+    <UserContext.Provider value={{ userLoggedIn: userName, setUserName }}>
+      <div className="app font-poppins">
+        <Header />
+        <Outlet />
+      </div>
+    </UserContext.Provider>
   );
 };
 

@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { CDN_URL } from "../utils/constants";
+import UserContext from "../utils/userContext";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
+
+  const { userLoggedIn } = useContext(UserContext);
 
   const {
     cloudinaryImageId,
@@ -28,6 +32,7 @@ const RestaurantCard = (props) => {
         </p>
         <p className="text-base">{cuisines.join(", ")}</p>
         <p className="text-base">{areaName}</p>
+        <p>User: {userLoggedIn}</p>
       </div>
     </div>
   );
