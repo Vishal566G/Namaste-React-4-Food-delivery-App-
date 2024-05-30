@@ -22,3 +22,15 @@
  - Slice (cartSlice)
  - dispatch(action)
  - Selector
+
+
+ # Types of Testing (developer)
+ - Unit testing
+ - Integration Testing
+ - End to End - e2e Testing
+
+ # Setting up testing in our App
+ - Install react testing library
+ - Installed jest
+ - Installed Babel dependencies
+ - Configure Babel
