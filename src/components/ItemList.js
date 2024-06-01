@@ -3,11 +3,13 @@ import { CDN_URL } from "../utils/constants";
 import { addItem } from "../utils/cartSlice";
 
 const ItemList = ({ items }) => {
+  // console.log(items)
   const dispatch = useDispatch();
 
   const handleAddItem = (item) => {
     // Dispatch an aciton
     dispatch(addItem(item.card.info.name));
+    console.log(item.card.info.name);
   };
 
   return (

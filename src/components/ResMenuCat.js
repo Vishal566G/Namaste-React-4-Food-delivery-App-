@@ -3,6 +3,7 @@ import ItemList from "./ItemList";
 
 const ResMenuCat = ({ data }) => {
   const [showItems, setShowiItems] = useState(false);
+  // console.log(data.itemCards)
 
   const handleClick = () => {
     setShowiItems(!showItems);
