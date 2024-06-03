@@ -34,3 +34,4 @@
  - Installed jest
  - Installed Babel dependencies
  - Configure Babel
+ - Configure .parcelrc file to disable default babel transpilation
