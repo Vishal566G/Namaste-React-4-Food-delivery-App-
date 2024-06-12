@@ -35,3 +35,5 @@
  - Installed Babel dependencies
  - Configure Babel
  - Configure .parcelrc file to disable default babel transpilation
+ - Jest configuration - jest --init
+ - Install Jsdom library
