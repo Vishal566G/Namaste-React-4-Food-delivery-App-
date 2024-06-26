@@ -37,3 +37,7 @@
  - Configure .parcelrc file to disable default babel transpilation
  - Jest configuration - jest --init
  - Install Jsdom library
+ - Install @babel/preset-react - to make JSX work in test cases
+ - Include @babel/preset-react inside my babel configuration
+ - Install @testing-library/jest-dom
+ - npm i -D  @testing-library/jest-dom
